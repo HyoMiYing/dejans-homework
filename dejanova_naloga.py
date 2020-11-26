@@ -1,10 +1,10 @@
-#1 Točka
+#1
 
 def v_pot(niz):
     seznam_premikov = niz.split(' ')
     seznam_premikov_v_terkah = []
     for premik in seznam_premikov:
-        seznam_premikov_v_terkah.append((premik[0], premik[1:]))
+        seznam_premikov_v_terkah.append((premik[0], int(premik[1:])))
     return seznam_premikov_v_terkah
 
 #2 Točka
