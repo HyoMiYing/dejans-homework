@@ -7,7 +7,7 @@ def v_pot(niz):
         seznam_premikov_v_terkah.append((premik[0], int(premik[1:])))
     return seznam_premikov_v_terkah
 
-#2 Točka
+#2
 
 slovar_smeri = {
     '<' : (-1, 0),
@@ -28,7 +28,7 @@ def odsek(x_koordinata, y_koordinata, smerni_znak, razdalja_potovanja):
         seznam_terk.append((x_koordinata, y_koordinata))
     return seznam_terk
 
-#3 Odsek
+#3
 
 
 def tocke(seznam_terk):
@@ -42,7 +42,7 @@ def tocke(seznam_terk):
         rezultat.append(pot_odseka)
     return rezultat
 
-#4 Presečišče
+#4
 
 def presecisce(s, t):
     s_premiki = v_pot(s)
