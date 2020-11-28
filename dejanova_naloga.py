@@ -40,9 +40,11 @@ def tocke(seznam_terk):
         zacetna_x_koordinata = pot_odseka[-1][0]
         zacetna_y_koordinata = pot_odseka[-1][1]
         if index != 0:
-            rezultat.append(pot_odseka[1:])
+            for delcek_poti in pot_odseka[1:]:
+                rezultat.append(delcek_poti)
         elif index == 0:
-            rezultat.append(pot_odseka)
+            for delcek_poti in pot_odseka:
+                rezultat.append(delcek_poti)
     return rezultat
 
 #4
