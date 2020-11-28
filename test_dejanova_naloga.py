@@ -38,7 +38,8 @@ class RundownTest(unittest.TestCase):
 
     def test_4nd_task_happy_path(self):
         # This task does not have an example in instructions
-        pass
+        solution = presecisce('^2 >6 ^6 <1', '>1 ^3 >6')
+        self.assertEqual(solution, [(0, 0), (1, 2), (6, 3)])
 
 if __name__ == '__main__':
     unittest.main()
