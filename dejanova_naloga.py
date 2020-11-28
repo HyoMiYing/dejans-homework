@@ -54,23 +54,11 @@ def presecisce(s, t):
     t_premiki = v_pot(t)
 
     s_tocke = tocke(s_premiki)
-
     t_tocke = tocke(t_premiki)
 
-
-    s_prave_tocke = []
-    for nested_seznam in s_tocke:
-        for tocka in nested_seznam:
-            s_prave_tocke.append(tocka)
-
-    t_prave_tocke = []
-    for nested_seznam in t_tocke:
-        for tocka in nested_seznam:
-            t_prave_tocke.append(tocka)
-
     presecisca = []
-    for tocka in s_prave_tocke:
-        if tocka in t_prave_tocke:
+    for tocka in s_tocke:
+        if tocka in t_tocke:
             presecisca.append(tocka)
     
     return presecisca
