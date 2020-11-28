@@ -35,11 +35,17 @@ def tocke(seznam_terk):
     rezultat = []
     zacetna_x_koordinata = 0
     zacetna_y_koordinata = 0
-    for terka in seznam_terk:
-        pot_odseka = odsek(zacetna_x_koordinata, zacetna_y_koordinata, terka[0], terka[1])
-        zacetna_x_koordinata = pot_odseka[-1][0]
-        zacetna_y_koordinata = pot_odseka[-1][1]
-        rezultat.append(pot_odseka)
+    for index, terka in enumerate(seznam_terk):
+        if index != 0:
+            pot_odseka = odsek(zacetna_x_koordinata, zacetna_y_koordinata, terka[0], terka[1])
+            zacetna_x_koordinata = pot_odseka[-1][0]
+            zacetna_y_koordinata = pot_odseka[-1][1]
+            rezultat.append(pot_odseka[1:])
+        elif index == 0:
+            pot_odseka = odsek(zacetna_x_koordinata, zacetna_y_koordinata, terka[0], terka[1])
+            zacetna_x_koordinata = pot_odseka[-1][0]
+            zacetna_y_koordinata = pot_odseka[-1][1]
+            rezultat.append(pot_odseka)
     return rezultat
 
 #4
