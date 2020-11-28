@@ -12,10 +12,33 @@ class RundownTest(unittest.TestCase):
         pass
 
     def test_1st_task_happy_path(self):
-        # This example is taken directly from
+        # These examples are taken directly from
         # the task instructions
-        solution = v_pot('>69 ^69 <69')
+        solution = v_pot('>100 ^42 <12')
         self.assertEqual(solution, [('>', 100), ('^', 42), ('<', 13)])
+
+    def test_2nd_task_happy_path(self):
+        solution = odsek(2, 5, '^', 3)
+        self.assertEqual(solution, [(2, 5), (2, 6), (2, 7), (2, 8)])
+        
+
+    def test_3nd_task_happy_path(self):
+        solution = tocke([('>', 3), ('v', 2), ('>', 2)])
+        self.assertEqual(solution, [
+            (0, 0),
+            (1, 0),
+            (2, 0),
+            (3, 0),
+            (3, -1),
+            (3, -2),
+            (4, -2),
+            (5, -2),
+            ])
+        
+
+    def test_4nd_task_happy_path(self):
+        # This task does not have an example in instructions
+        pass
 
 if __name__ == '__main__':
     unittest.main()
