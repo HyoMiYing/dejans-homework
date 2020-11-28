@@ -14,7 +14,7 @@ class RundownTest(unittest.TestCase):
     def test_1st_task_happy_path(self):
         # These examples are taken directly from
         # the task instructions
-        solution = v_pot('>100 ^42 <12')
+        solution = v_pot('>100 ^42 <13')
         self.assertEqual(solution, [('>', 100), ('^', 42), ('<', 13)])
 
     def test_2nd_task_happy_path(self):
